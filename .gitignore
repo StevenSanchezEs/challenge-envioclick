@@ -1,0 +1,56 @@
+# Bytecode de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos del entorno virtual
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Archivos de configuración de PyCharm / VSCode
+.idea/
+.vscode/
+
+# Archivos de pruebas
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+
+# Archivos de logs
+*.log
+
+# Archivos de bases de datos locales
+*.sqlite3
+
+# Archivos de configuración secretos
+.env
+*.env
+
+# Compilaciones de Cython
+*.c
+*.so
+
+# Dist y egg-info (al empaquetar)
+build/
+dist/
+*.egg-info/
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
+
+# Archivos de docker (si los generas con `docker-compose`)
+*.pid
+
+# Celery beat schedule
+celerybeat-schedule
+
+# Archivos de MyPy
+.mypy_cache/
+
+# Archivos de coverage
+htmlcov/
