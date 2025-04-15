@@ -1,3 +1,6 @@
+import sys
+
+
 def preprocess_text(text):
     forbidden_chars = [".", ",", ";", "\n"]
     index = 0
@@ -21,3 +24,18 @@ def count_word_occurrences(word, text):
                 count += 1
         index += 1
     return f"{count} ocurrencias encontradas."
+
+
+def main():
+    if len(sys.argv) < 3:
+        print("Uso: python main.py <texto> <palabra>")
+        sys.exit(1)
+
+    text = sys.argv[1]
+    word = sys.argv[2]
+    result = count_word_occurrences(word, text)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
