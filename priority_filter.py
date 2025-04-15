@@ -35,3 +35,21 @@ def sort_list(items, key, descending=True):
         if not swapped:
             break
     return items
+
+
+def filter_by_criteria(criteria, entry):
+    valid = []
+    invalid = []
+    for item in entry:
+        is_valid = True
+        # Recorremos cada criterio y evaluamos:
+        for attribute, operator, value in criteria:
+            if not check_operator(item.get(attribute), operator, value):
+                is_valid = False
+                break
+        if is_valid:
+            valid.append(item)
+        else:
+            invalid.append(item)
+    sorted_valid = sort_list(valid, "priority", descending=True)
+    return sorted_valid + invalid
